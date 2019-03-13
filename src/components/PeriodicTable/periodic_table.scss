@@ -6,6 +6,7 @@
   grid-template-rows: auto repeat(7, 1fr) 24px repeat(2, 1fr);
   padding-left: 1em;
   padding-right: 1em;
+  font-family: Roboto;
   &__top_numbers {
     grid-row: 1;
     justify-self: center;
@@ -25,7 +26,7 @@
     grid-column: 4;
     grid-row: 8;
     font-size: 10px;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #555555;
     &__numbers {
       align-self: end;
     }
@@ -40,7 +41,7 @@
     grid-column: 4;
     grid-row: 7;
     font-size: 10px;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #555555;
     &__numbers {
       align-self: end;
     }
@@ -49,8 +50,8 @@
     }
   }
   &__element {
-    border-bottom: 1px solid #000000;
-    border-right: 1px solid #000000;
+    border-bottom: 1px solid #555555;
+    border-right: 1px solid #555555;
     text-align: center;
     cursor: pointer;
     display: grid;
@@ -120,50 +121,50 @@
   .H {
     grid-column: 2;
     grid-row: 2;
-    border-top: 1px solid #000000;
-    border-left: 1px solid #000000;
+    border-top: 1px solid #555555;
+    border-left: 1px solid #555555;
   }
   .He {
     grid-column: 19;
     grid-row: 2;
-    border-top: 1px solid #000000;
-    border-left: 1px solid #000000;
+    border-top: 1px solid #555555;
+    border-left: 1px solid #555555;
   }
   .Li {
     grid-column: 2;
     grid-row: 3;
-    border-left: 1px solid #000000;
+    border-left: 1px solid #555555;
   }
   .Be {
     grid-column: 3;
     grid-row: 3;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   }
   .B {
     grid-column: 14;
     grid-row: 3;
-    border-top: 1px solid #000000;
-    border-left: 1px solid #000000;
+    border-top: 1px solid #555555;
+    border-left: 1px solid #555555;
   };
   .C {
     grid-column: 15;
     grid-row: 3;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .N {
     grid-column: 16;
     grid-row: 3;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .O {
     grid-column: 17;
     grid-row: 3;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .F {
     grid-column: 18;
     grid-row: 3;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Ne {
     grid-column: 19;
@@ -172,7 +173,7 @@
   .Na {
     grid-column: 2;
     grid-row: 4;
-    border-left: 1px solid #000000;
+    border-left: 1px solid #555555;
   };
   .Mg {
     grid-column: 3;
@@ -181,7 +182,7 @@
   .Al {
     grid-column: 14;
     grid-row: 4;
-    border-left: 1px solid #000000;
+    border-left: 1px solid #555555;
   };
   .Si {
     grid-column: 15;
@@ -206,7 +207,7 @@
   .K {
     grid-column: 2;
     grid-row: 5;
-    border-left: 1px solid #000000;
+    border-left: 1px solid #555555;
   };
   .Ca {
     grid-column: 3;
@@ -215,52 +216,52 @@
   .Sc {
     grid-column: 4;
     grid-row: 5;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Ti {
     grid-column: 5;
     grid-row: 5;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .V {
     grid-column: 6;
     grid-row: 5;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Cr {
     grid-column: 7;
     grid-row: 5;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Mn {
     grid-column: 8;
     grid-row: 5;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Fe {
     grid-column: 9;
     grid-row: 5;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Co {
     grid-column: 10;
     grid-row: 5;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Ni {
     grid-column: 11;
     grid-row: 5;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Cu {
     grid-column: 12;
     grid-row: 5;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Zn {
     grid-column: 13;
     grid-row: 5;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Ga {
     grid-column: 14;
@@ -289,7 +290,7 @@
   .Rb {
     grid-column: 2;
     grid-row: 6;
-    border-left: 1px solid #000000;
+    border-left: 1px solid #555555;
   };
   .Sr {
     grid-column: 3;
@@ -362,7 +363,7 @@
   .Cs {
     grid-column: 2;
     grid-row: 7;
-    border-left: 1px solid #000000;
+    border-left: 1px solid #555555;
   };
   .Ba {
     grid-column: 3;
@@ -371,83 +372,83 @@
   .La {
     grid-column: 4;
     grid-row: 10;
-    border-top: 1px solid #000000;
-    border-left: 1px solid #000000;
+    border-top: 1px solid #555555;
+    border-left: 1px solid #555555;
   };
   .Ce {
     grid-column: 5;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Pr {
     grid-column: 6;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Nd {
     grid-column: 7;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Pm {
     grid-column: 8;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Sm {
     grid-column: 9;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Eu {
     grid-column: 10;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Gd {
     grid-column: 11;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Tb {
     grid-column: 12;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Dy {
     grid-column: 13;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Ho {
     grid-column: 14;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Er {
     grid-column: 15;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Tm {
     grid-column: 16;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Yb {
     grid-column: 17;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Lu {
     grid-column: 18;
     grid-row: 10;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #555555;
   };
   .Hf {
     grid-column: 5;
     grid-row: 7;
-    border-left: 1px solid #000000;
+    border-left: 1px solid #555555;
   };
   .Ta {
     grid-column: 6;
@@ -508,7 +509,7 @@
   .Fr {
     grid-column: 2;
     grid-row: 8;
-    border-left: 1px solid #000000;
+    border-left: 1px solid #555555;
   };
   .Ra {
     grid-column: 3;
@@ -517,7 +518,7 @@
   .Ac {
     grid-column: 4;
     grid-row: 11;
-    border-left: 1px solid #000000;
+    border-left: 1px solid #555555;
   };
   .Th {
     grid-column: 5;
@@ -578,7 +579,7 @@
   .Rf {
     grid-column: 5;
     grid-row: 8;
-    border-left: 1px solid #000000;
+    border-left: 1px solid #555555;
   };
   .Db {
     grid-column: 6;
@@ -637,3 +638,99 @@
     grid-row: 8;
   }
 }
+
+
+// ------------------------ STARTING FILTERs -----------------------------
+header {
+  display: grid;
+  grid-template-areas: "group metals metals metalloids non-metals other props props";
+  grid-column-gap: 40px;
+  background: #FCFCFC;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+  border-bottom: 1px solid #ECECEC;
+  padding: 16px 64px;
+  margin-bottom: 32px;  
+}
+h2 {
+  font-family: Roboto-Bold;
+  font-size: 10px;
+  color: #5E6266;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+a {
+  font-family: Roboto-Regular;
+  font-size: 12px;
+  color: #949494;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+.group{
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  &:before {
+    content: "FILTERS";
+    position: absolute;    
+    margin-left: -60px;
+    margin-top: 40px;
+    transform: scale(2) rotate(-90deg);
+    font-family: "Roboto";   
+    font-weight: bold;
+    opacity: 0.05;
+  }
+  .group-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+    place-items: stretch;
+
+  }
+  a{
+    padding: 2px;
+    background: #19AAD1;
+    border-radius: 1px;
+    font-family: Roboto-Bold;
+    font-size: 10px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    text-decoration: none;    
+
+  }
+} 
+.metals {
+  h2 {
+    &:before {
+      content: "CLASSIFICATION";
+      position: absolute;    
+      margin-left: 60px;
+      transform: scale(3);
+      font-family: "Roboto";   
+      font-weight: bold;
+      opacity: 0.05;
+    }
+  }
+}
+.metals, .metalloids, .non-metals, .other-classifications, .properties {
+  &::before {
+    border-left: 1px solid #EEEEEE;
+    content: "";
+    position: absolute;
+    height: 90px;
+    margin-left: -20px;
+  }
+}
+.metals, .metals-two, .metalloids, .non-metals, .other-classifications, .properties, .properties-2 {
+  display: grid;
+  grid-template-rows: 28px 1fr 1fr 1fr;
+  h2 {
+    grid-row: 1/2;
+  }  
+}
+.metals a, .metals-two a {
+  margin: 4px 0px;
+}
+// ------------------------- ENDING FILTERS -----------------------------

@@ -5,6 +5,7 @@ import './periodic_table.scss'
 import { elements } from './elements';
 import Element from './Element';
 import ExpandedEl from './ExpandedEl';
+import Filters from './Filters';
 
 export default class PeriodicTable extends Component {
   constructor(props) {
@@ -126,15 +127,25 @@ export default class PeriodicTable extends Component {
     )
   }
 
+  renderFilters() {
+    return (
+      <Filters 
+      />
+    )
+  }
+
   render() {
     return (
-      <div className="PeriodicTable">
-        {this.renderTopNumbers()}
-        {this.renderSideNumbers()}
-        {this.renderExpandedEl()}
-        {this.renderLanthanidesBlock()}
-        {this.renderActinidesBlock()}
-        {this.renderElements()}
+      <div className="fullTable">
+        {this.renderFilters()}      
+        <div className="PeriodicTable">        
+          {this.renderTopNumbers()}
+          {this.renderSideNumbers()}
+          {this.renderExpandedEl()}
+          {this.renderLanthanidesBlock()}
+          {this.renderActinidesBlock()}
+          {this.renderElements()}
+        </div>
       </div>
     );
   }
