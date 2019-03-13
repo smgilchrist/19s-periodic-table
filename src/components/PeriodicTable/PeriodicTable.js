@@ -123,6 +123,7 @@ export default class PeriodicTable extends Component {
   renderExpandedEl() {
     return (
       <ExpandedEl
+        element={elements.find(el => el.symbol === this.state.highlightedEl)}
       />
     )
   }

@@ -79,13 +79,56 @@
     display: grid;
     grid-template-columns: 1.25fr 2fr;
     grid-template-areas: 'symbol data data';
+    // margin-bottom: 12px;
     &__symbol {
       grid-area: symbol;
-      background-color: black;
+      color: #ffffff;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 24px 1fr 24px 24px;
+      grid-template-areas: 'header' 'symbol' 'name' 'group';
+      &__header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'number mass';
+        padding: 12px 12px 0 12px;
+        &__atomic_number {
+          grid-area: number;
+        }
+        &__atomic_mass {
+          grid-area: mass;
+          justify-self: end;
+        }
+      }
+      &__symbol {
+        font-size: 72px;
+        font-weight: bold;
+        padding-left: 12px;
+        align-self: center;
+      }
+      &__name {
+        font-size: 16px;
+        font-weight: bold;
+        padding-left: 12px;
+        padding-bottom: 6px;
+      }
+      &__group {
+        font-size: 12px;
+        padding-left: 12px;
+        padding-bottom: 12px;
+      }
     }
     &__data {
       grid-area: data;
-      background-color: blue;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto;
+      color: #000000;
+      grid-template-areas:
+        'atomic-mass el-eg'
+        'io-energy el-affinity'
+        'atomic-radius charges';
+      
     }
   }
   .alkali-metals {
