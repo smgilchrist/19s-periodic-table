@@ -12,6 +12,8 @@ const propTypes = {
 const StyledElement = styled.div`
   display: grid;
   grid-template-rows: auto 1fr auto auto;
+  padding-top: 2px;
+  padding-bottom: 2px;
 `
 
 const AtomicNumber = styled.span`

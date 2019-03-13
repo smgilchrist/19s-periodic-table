@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 
 import PeriodicTable from './components/PeriodicTable/PeriodicTable';
 
