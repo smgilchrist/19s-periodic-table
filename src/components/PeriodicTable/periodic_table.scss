@@ -743,16 +743,28 @@ a {
 .group{
   display: grid;
   grid-template-rows: auto auto auto auto;
-  &:before {
-    content: "FILTERS";
-    position: absolute;    
-    margin-left: -60px;
-    margin-top: 40px;
-    transform: scale(2) rotate(-90deg);
-    font-family: "Roboto";   
-    font-weight: bold;
-    opacity: 0.05;
+  place-self:center;
+  // &:before {
+  //   content: "MADE WITH ❤️ IN MIAMI";
+  //   position: absolute;    
+  //   margin-left: -120px;
+  //   margin-top: 40px;
+  //   transform: scale(0.5) rotate(-90deg);
+  //   font-family: "Roboto", sans-serif;   
+  //   font-weight: bold;
+  //   opacity: 0.5;
+  // }
+  span {
+    font-size: 10px;
+    // font-weight: bold;
+    text-transform: uppercase;
+    color: #949494;
+    opactiy: 0.5;
+    font-family: "Roboto", sans-serif;   
   }
+  &__logo {
+    width: 180px;    
+  } 
   .group-row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;

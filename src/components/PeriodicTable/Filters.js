@@ -12,27 +12,7 @@ export default class Filters extends Component {
     return (
       <header>
         <div className="group">
-          <h2>Group</h2>
-          <div className="group-row">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="">3</a>
-            <a href="">4</a>
-            <a href="">5</a>
-            <a href="">6</a>
-            <a href="">7</a>
-            <a href="">8</a>
-            <a href="">9</a>
-            <a href="">10</a>
-            <a href="">11</a>
-            <a href="">12</a>
-            <a href="">13</a>
-            <a href="">14</a>
-            <a href="">15</a>
-            <a href="">16</a>
-            <a href="">17</a>
-            <a href="">18</a>
-          </div>
+          <img className="group__logo" src="https://cdn-assets3.clutchprep.com/assets/logo@2x-37df6c53423a9b4fdc3970fb25aff74162b15b4af62aaf384f48844184ad787a.png"></img>                              
         </div>
         
         <div className="metals">
