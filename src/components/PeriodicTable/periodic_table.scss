@@ -1,5 +1,4 @@
 @import './variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
 
 .PeriodicTable {
@@ -726,7 +725,8 @@ header {
   margin-bottom: 32px;  
 }
 h2 {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   font-size: 10px;
   color: #5E6266;
   letter-spacing: 0;
@@ -734,7 +734,7 @@ h2 {
 }
 
 a {
-  font-family: Roboto-Regular;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   color: #949494;
   letter-spacing: 0;
@@ -766,7 +766,8 @@ a {
     padding: 2px;
     background: #19AAD1;
     border-radius: 1px;
-    font-family: Roboto-Bold;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
     font-size: 10px;
     color: #FFFFFF;
     letter-spacing: 0;
@@ -782,7 +783,7 @@ a {
       position: absolute;    
       margin-left: 60px;
       transform: scale(3);
-      font-family: "Roboto";   
+      font-family: "Roboto", sans-serif;   
       font-weight: bold;
       opacity: 0.05;
     }
