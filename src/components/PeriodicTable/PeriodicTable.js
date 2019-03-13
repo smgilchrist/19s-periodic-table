@@ -130,7 +130,7 @@ export default class PeriodicTable extends Component {
 
   renderFilters() {
     return (
-      <Filters 
+      <Filters
       />
     )
   }
@@ -138,11 +138,11 @@ export default class PeriodicTable extends Component {
   render() {
     return (
       <div className="fullTable">
-        {this.renderFilters()}      
-        <div className="PeriodicTable">        
+        {this.renderFilters()}
+        <div className="PeriodicTable">
           {this.renderTopNumbers()}
           {this.renderSideNumbers()}
-          {this.renderExpandedEl()}
+          {this.state.highlightedEl && this.renderExpandedEl()}
           {this.renderLanthanidesBlock()}
           {this.renderActinidesBlock()}
           {this.renderElements()}
