@@ -1,108 +1,141 @@
 import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
 
-import { elements, elementPositions } from './elements';
+import './periodic_table.scss'
+
+import { elements } from './elements';
 import Element from './Element';
-
-const StyledPeriodicTable = styled.div`
-  display: grid;
-  grid-template-columns: auto repeat(18, 1fr);
-  grid-template-rows: auto repeat(7, 1fr) 24px repeat(2, 1fr);
-  padding-left: 1em;
-  padding-right: 1em;
-`
-
-const periodicColors = {
-  'Alkali Metals': '#9fa8da',
-  'Noble Gases': '#ffcab1',
-  'Alkaline Earth Metals': '#bced09',
-  'N/A': '#f9cb40',
-  'Pnictogens': '#ff715b',
-  'Chalcogens': '#78c0E0',
-  'Halogens': '#17bebb',
-  'Transition Metals': '#ef709d',
-  'Lanthanides': '#bdbbb0',
-  'Actinides': '#dbd3ad',
-}
-
-const borderTopColumns = ['H', 'Be', 'B', 'C', 'N', 'O', 'F',
-  'He', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu',
-  'Zn', 'La', 'Ce', 'Pr', 'Nd', 'Pm', 'Sm', 'Eu', 'Gd', 'Tb',
-  'Dy', 'Ho', 'Er', 'Tm', 'Yb', 'Lu']
-
-const borderLeftColumns = ['H', 'Li', 'Na', 'K', 'Rb', 'Cs',
-  'Fr', 'La', 'Ac', 'B', 'He', 'Al', 'Hf', 'Rf']
+import ExpandedEl from './ExpandedEl';
 
 export default class PeriodicTable extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = { highlightedEl: null }
+  }
+
+  handleElMouseEnter = (el) => {
+    this.setState({
+      highlightedEl: el,
+    })
+  }
+
+  handleElMouseLeave = (el) => {
+    this.setState({
+      highlightedEl: null,
+    })
+  }
+
   renderElements() {
     return elements.map((element) => {
-      const StyledElement = styled.div`
-        grid-column: ${elementPositions[element.symbol].column};
-        grid-row: ${elementPositions[element.symbol].row};
-        background-color: ${periodicColors[element.groupName]};
-        border-top: ${borderTopColumns.includes(element.symbol) ? '1px solid #000000' : ''};
-        border-left: ${borderLeftColumns.includes(element.symbol) ? '1px solid #000000' : ''};
-        border-bottom: 1px solid #000000;
-        border-right: 1px solid #000000;
-        text-align: center;
-      `
-
-      const { name, symbol, atomicNumber, atomicMass } = element
+      const { name, symbol, atomicNumber, atomicMass, groupName } = element
 
       return (
-        <StyledElement key={symbol}>
-          <Element
-            name={name}
-            symbol={symbol}
-            atomicNumber={atomicNumber}
-            atomicMass={atomicMass}
-          />
-        </StyledElement>
+        <Element
+          key={symbol}
+          className={`PeriodicTable__element ${element.symbol}`}
+          name={name}
+          symbol={symbol}
+          atomicNumber={atomicNumber}
+          atomicMass={atomicMass}
+          groupName={groupName}
+          passMouseEnter={this.handleElMouseEnter}
+          passMouseLeave={this.handleElMouseLeave}
+        />
       )
     })
+  }
+
+  handleColMouseEnter = (colNum) => () => {
+    console.log('colNum: ', colNum)
   }
 
   renderTopNumbers() {
     return [...Array(18)].map((_, index) => {
-      const StyledNumber = styled.div`
-        grid-column: ${index + 2};
-        grid-row: 1;
-        justify-self: center;
-        margin-bottom: 10px;
-      `
+      const colNum = index + 1
 
       return (
-        <StyledNumber>
-          {index + 1}
-        </StyledNumber>
+        <div
+          key={`col${colNum}`}
+          className="PeriodicTable__top_numbers"
+          onMouseEnter={this.handleColMouseEnter(colNum)}
+          onMouseLeave={this.handleMouseLeave}
+          style={{ gridColumn: (colNum + 1) }}
+        >
+          {colNum}
+        </div>
       )
     })
+  }
+
+  handleRowMouseEnter = (rowNum) => () => {
+    console.log('rowNum: ', rowNum)
+  }
+
+  handleMouseLeave = () => {
+    console.log('handle mouse leave')
   }
 
   renderSideNumbers() {
     return [...Array(7)].map((_, index) => {
-      const StyledNumber = styled.div`
-        grid-column: 1;
-        grid-row: ${index + 2};
-        align-self: center;
-        margin-right: 10px;
-      `
+      const rowNum = index + 1
 
       return (
-        <StyledNumber>
-          {index + 1}
-        </StyledNumber>
+        <div
+          key={`row${rowNum}`}
+          className="PeriodicTable__side_numbers"
+          onMouseEnter={this.handleRowMouseEnter(rowNum)}
+          onMouseLeave={this.handleMouseLeave}
+          style={{ gridRow: (rowNum + 1) }}
+        >
+          {rowNum}
+        </div>
       )
     })
   }
 
+  renderLanthanidesBlock() {
+    return (
+      <div className="PeriodicTable__lanthanides_block">
+        <span className="PeriodicTable__lanthanides_block__numbers">
+          57-71
+        </span>
+        <span className="PeriodicTable__lanthanides_block__name">
+        Lanthanides
+        </span>
+      </div>
+    )
+  }
+
+  renderActinidesBlock() {
+    return (
+      <div className="PeriodicTable__actinides_block">
+        <span className="PeriodicTable__actinides_block__numbers">
+          89-103
+        </span>
+        <span className="PeriodicTable__actinides_block__name">
+          Actinides
+        </span>
+      </div>
+    )
+  }
+
+  renderExpandedEl() {
+    return (
+      <ExpandedEl
+      />
+    )
+  }
+
   render() {
     return (
-      <StyledPeriodicTable>
+      <div className="PeriodicTable">
         {this.renderTopNumbers()}
         {this.renderSideNumbers()}
+        {this.renderExpandedEl()}
+        {this.renderLanthanidesBlock()}
+        {this.renderActinidesBlock()}
         {this.renderElements()}
-      </StyledPeriodicTable>
+      </div>
     );
   }
 }

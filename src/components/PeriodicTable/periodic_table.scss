@@ -1,0 +1,639 @@
+@import './variables.scss';
+
+.PeriodicTable {
+  display: grid;
+  grid-template-columns: auto repeat(18, 1fr);
+  grid-template-rows: auto repeat(7, 1fr) 24px repeat(2, 1fr);
+  padding-left: 1em;
+  padding-right: 1em;
+  &__top_numbers {
+    grid-row: 1;
+    justify-self: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  &__side_numbers {
+    grid-column: 1;
+    align-self: center;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  &__actinides_block {
+    display: grid;
+    text-align: center;
+    background-color: $actinides;
+    grid-column: 4;
+    grid-row: 8;
+    font-size: 10px;
+    border-bottom: 1px solid #000000;
+    &__numbers {
+      align-self: end;
+    }
+    &__name {
+      align-self: start;
+    }
+  }
+  &__lanthanides_block {
+    display: grid;
+    text-align: center;
+    background-color: $lanthanides;
+    grid-column: 4;
+    grid-row: 7;
+    font-size: 10px;
+    border-bottom: 1px solid #000000;
+    &__numbers {
+      align-self: end;
+    }
+    &__name {
+      align-self: start;
+    }
+  }
+  &__element {
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    text-align: center;
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    &__atomic_number,
+    &__atomic_mass,
+    &__name {
+      font-size: 10px;
+    }
+    &__symbol {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__expanded_el {
+    grid-column-start: 5;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: 1.25fr 2fr;
+    grid-template-areas: 'symbol data data';
+    &__symbol {
+      grid-area: symbol;
+      background-color: black;
+    }
+    &__data {
+      grid-area: data;
+      background-color: blue;
+    }
+  }
+  .alkali-metals {
+    background-color: $alkali-metals;
+  }
+  .noble-gases {
+    background-color: $noble-gases;
+  }
+  .alkaline-earth-metals {
+    background-color: $alkaline-earth-metals;
+  }
+  .n-a {
+    background-color: $n-a;
+  }
+  .pnictogens {
+    background-color: $pnictogens;
+  }
+  .chalcogens {
+    background-color: $chalcogens;
+  }
+  .halogens {
+    background-color: $halogens;
+  }
+  .transition-metals {
+    background-color: $transition-metals;
+  }
+  .lanthanides {
+    background-color: $lanthanides;
+  }
+  .actinides {
+    background-color: $actinides;
+  }
+  .H {
+    grid-column: 2;
+    grid-row: 2;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+  }
+  .He {
+    grid-column: 19;
+    grid-row: 2;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+  }
+  .Li {
+    grid-column: 2;
+    grid-row: 3;
+    border-left: 1px solid #000000;
+  }
+  .Be {
+    grid-column: 3;
+    grid-row: 3;
+    border-top: 1px solid #000000;
+  }
+  .B {
+    grid-column: 14;
+    grid-row: 3;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+  };
+  .C {
+    grid-column: 15;
+    grid-row: 3;
+    border-top: 1px solid #000000;
+  };
+  .N {
+    grid-column: 16;
+    grid-row: 3;
+    border-top: 1px solid #000000;
+  };
+  .O {
+    grid-column: 17;
+    grid-row: 3;
+    border-top: 1px solid #000000;
+  };
+  .F {
+    grid-column: 18;
+    grid-row: 3;
+    border-top: 1px solid #000000;
+  };
+  .Ne {
+    grid-column: 19;
+    grid-row: 3;
+  };
+  .Na {
+    grid-column: 2;
+    grid-row: 4;
+    border-left: 1px solid #000000;
+  };
+  .Mg {
+    grid-column: 3;
+    grid-row: 4;
+  };
+  .Al {
+    grid-column: 14;
+    grid-row: 4;
+    border-left: 1px solid #000000;
+  };
+  .Si {
+    grid-column: 15;
+    grid-row: 4;
+  };
+  .P {
+    grid-column: 16;
+    grid-row: 4;
+  };
+  .S {
+    grid-column: 17;
+    grid-row: 4;
+  };
+  .Cl {
+    grid-column: 18;
+    grid-row: 4;
+  };
+  .Ar {
+    grid-column: 19;
+    grid-row: 4;
+  };
+  .K {
+    grid-column: 2;
+    grid-row: 5;
+    border-left: 1px solid #000000;
+  };
+  .Ca {
+    grid-column: 3;
+    grid-row: 5;
+  };
+  .Sc {
+    grid-column: 4;
+    grid-row: 5;
+    border-top: 1px solid #000000;
+  };
+  .Ti {
+    grid-column: 5;
+    grid-row: 5;
+    border-top: 1px solid #000000;
+  };
+  .V {
+    grid-column: 6;
+    grid-row: 5;
+    border-top: 1px solid #000000;
+  };
+  .Cr {
+    grid-column: 7;
+    grid-row: 5;
+    border-top: 1px solid #000000;
+  };
+  .Mn {
+    grid-column: 8;
+    grid-row: 5;
+    border-top: 1px solid #000000;
+  };
+  .Fe {
+    grid-column: 9;
+    grid-row: 5;
+    border-top: 1px solid #000000;
+  };
+  .Co {
+    grid-column: 10;
+    grid-row: 5;
+    border-top: 1px solid #000000;
+  };
+  .Ni {
+    grid-column: 11;
+    grid-row: 5;
+    border-top: 1px solid #000000;
+  };
+  .Cu {
+    grid-column: 12;
+    grid-row: 5;
+    border-top: 1px solid #000000;
+  };
+  .Zn {
+    grid-column: 13;
+    grid-row: 5;
+    border-top: 1px solid #000000;
+  };
+  .Ga {
+    grid-column: 14;
+    grid-row: 5;
+  };
+  .Ge {
+    grid-column: 15;
+    grid-row: 5;
+  };
+  .As {
+    grid-column: 16;
+    grid-row: 5;
+  };
+  .Se {
+    grid-column: 17;
+    grid-row: 5;
+  };
+  .Br {
+    grid-column: 18;
+    grid-row: 5;
+  };
+  .Kr {
+    grid-column: 19;
+    grid-row: 5;
+  };
+  .Rb {
+    grid-column: 2;
+    grid-row: 6;
+    border-left: 1px solid #000000;
+  };
+  .Sr {
+    grid-column: 3;
+    grid-row: 6;
+  };
+  .Y {
+    grid-column: 4;
+    grid-row: 6;
+  };
+  .Zr {
+    grid-column: 5;
+    grid-row: 6;
+  };
+  .Nb {
+    grid-column: 6;
+    grid-row: 6;
+  };
+  .Mo {
+    grid-column: 7;
+    grid-row: 6;
+  };
+  .Tc {
+    grid-column: 8;
+    grid-row: 6;
+  };
+  .Ru {
+    grid-column: 9;
+    grid-row: 6;
+  };
+  .Rh {
+    grid-column: 10;
+    grid-row: 6;
+  };
+  .Pd {
+    grid-column: 11;
+    grid-row: 6;
+  };
+  .Ag {
+    grid-column: 12;
+    grid-row: 6;
+  };
+  .Cd {
+    grid-column: 13;
+    grid-row: 6;
+  };
+  .In {
+    grid-column: 14;
+    grid-row: 6;
+  };
+  .Sn {
+    grid-column: 15;
+    grid-row: 6;
+  };
+  .Sb {
+    grid-column: 16;
+    grid-row: 6;
+  };
+  .Te {
+    grid-column: 17;
+    grid-row: 6;
+  };
+  .I {
+    grid-column: 18;
+    grid-row: 6;
+  };
+  .Xe {
+    grid-column: 19;
+    grid-row: 6;
+  };
+  .Cs {
+    grid-column: 2;
+    grid-row: 7;
+    border-left: 1px solid #000000;
+  };
+  .Ba {
+    grid-column: 3;
+    grid-row: 7;
+  };
+  .La {
+    grid-column: 4;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+  };
+  .Ce {
+    grid-column: 5;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Pr {
+    grid-column: 6;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Nd {
+    grid-column: 7;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Pm {
+    grid-column: 8;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Sm {
+    grid-column: 9;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Eu {
+    grid-column: 10;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Gd {
+    grid-column: 11;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Tb {
+    grid-column: 12;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Dy {
+    grid-column: 13;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Ho {
+    grid-column: 14;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Er {
+    grid-column: 15;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Tm {
+    grid-column: 16;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Yb {
+    grid-column: 17;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Lu {
+    grid-column: 18;
+    grid-row: 10;
+    border-top: 1px solid #000000;
+  };
+  .Hf {
+    grid-column: 5;
+    grid-row: 7;
+    border-left: 1px solid #000000;
+  };
+  .Ta {
+    grid-column: 6;
+    grid-row: 7;
+  };
+  .W {
+    grid-column: 7;
+    grid-row: 7;
+  };
+  .Re {
+    grid-column: 8;
+    grid-row: 7;
+  };
+  .Os {
+    grid-column: 9;
+    grid-row: 7;
+  };
+  .Ir {
+    grid-column: 10;
+    grid-row: 7;
+  };
+  .Pt {
+    grid-column: 11;
+    grid-row: 7;
+  };
+  .Au {
+    grid-column: 12;
+    grid-row: 7;
+  };
+  .Hg {
+    grid-column: 13;
+    grid-row: 7;
+  };
+  .Tl {
+    grid-column: 14;
+    grid-row: 7;
+  };
+  .Pb {
+    grid-column: 15;
+    grid-row: 7;
+  };
+  .Bi {
+    grid-column: 16;
+    grid-row: 7;
+  };
+  .Po {
+    grid-column: 17;
+    grid-row: 7;
+  };
+  .At {
+    grid-column: 18;
+    grid-row: 7;
+  };
+  .Rn {
+    grid-column: 19;
+    grid-row: 7;
+  };
+  .Fr {
+    grid-column: 2;
+    grid-row: 8;
+    border-left: 1px solid #000000;
+  };
+  .Ra {
+    grid-column: 3;
+    grid-row: 8;
+  };
+  .Ac {
+    grid-column: 4;
+    grid-row: 11;
+    border-left: 1px solid #000000;
+  };
+  .Th {
+    grid-column: 5;
+    grid-row: 11;
+  };
+  .Pa {
+    grid-column: 6;
+    grid-row: 11;
+  };
+  .U {
+    grid-column: 7;
+    grid-row: 11;
+  };
+  .Np {
+    grid-column: 8;
+    grid-row: 11;
+  };
+  .Pu {
+    grid-column: 9;
+    grid-row: 11;
+  };
+  .Am {
+    grid-column: 10;
+    grid-row: 11;
+  };
+  .Cm {
+    grid-column: 11;
+    grid-row: 11;
+  };
+  .Bk {
+    grid-column: 12;
+    grid-row: 11;
+  };
+  .Cf {
+    grid-column: 13;
+    grid-row: 11;
+  };
+  .Es {
+    grid-column: 14;
+    grid-row: 11;
+  };
+  .Fm {
+    grid-column: 15;
+    grid-row: 11;
+  };
+  .Md {
+    grid-column: 16;
+    grid-row: 11;
+  };
+  .No {
+    grid-column: 17;
+    grid-row: 11;
+  };
+  .Lr {
+    grid-column: 18;
+    grid-row: 11;
+  };
+  .Rf {
+    grid-column: 5;
+    grid-row: 8;
+    border-left: 1px solid #000000;
+  };
+  .Db {
+    grid-column: 6;
+    grid-row: 8;
+  };
+  .Sg {
+    grid-column: 7;
+    grid-row: 8;
+  };
+  .Bh {
+    grid-column: 8;
+    grid-row: 8;
+  };
+  .Hs {
+    grid-column: 9;
+    grid-row: 8;
+  };
+  .Mt {
+    grid-column: 10;
+    grid-row: 8;
+  };
+  .Ds {
+    grid-column: 11;
+    grid-row: 8;
+  };
+  .Rg {
+    grid-column: 12;
+    grid-row: 8;
+  };
+  .Cn {
+    grid-column: 13;
+    grid-row: 8;
+  };
+  .Nh {
+    grid-column: 14;
+    grid-row: 8;
+  }
+  .Fl {
+    grid-column: 15;
+    grid-row: 8;
+  }
+  .Mc {
+    grid-column: 16;
+    grid-row: 8;
+  }
+  .Lv {
+    grid-column: 17;
+    grid-row: 8;
+  }
+  .Ts {
+    grid-column: 18;
+    grid-row: 8;
+  }
+  .Og {
+    grid-column: 19;
+    grid-row: 8;
+  }
+}

@@ -1,57 +1,52 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
 
 const propTypes = {
   name: PropTypes.string.isRequired,
   symbol: PropTypes.string.isRequired,
   atomicMass: PropTypes.number.isRequired,
   atomicNumber: PropTypes.number.isRequired,
+  passMouseEnter: PropTypes.func.isRequired,
+  passMouseLeave: PropTypes.func.isRequired,
 }
 
-const StyledElement = styled.div`
-  display: grid;
-  grid-template-rows: auto 1fr auto auto;
-  padding-top: 2px;
-  padding-bottom: 2px;
-`
+export default class Element extends Component {
+  constructor(props) {
+    super(props)
 
-const AtomicNumber = styled.span`
-  font-size: 10px;
-`
+    this.state = { highlightedEl: null }
+  }
 
-const Symbol = styled.span`
-  font-size: 14px;
-  font-weight: bold;
-`
+  handleElMouseEnter = (el) => () => {
+    this.props.passMouseEnter(el)
+  }
 
-const Name = styled.span`
-  font-size: 10px;
-`
+  handleElMouseLeave = (el) => () => {
+    this.props.passMouseLeave(el)
+  }
 
-const AtomicMass = styled.span`
-  font-size: 10px;
-`
-
-const Element = ({
-  name, symbol, atomicNumber, atomicMass,
-}) => (
-  <StyledElement>
-    <AtomicNumber>
-      {atomicNumber}
-    </AtomicNumber>
-    <Symbol>
-      {symbol}
-    </Symbol>
-    <Name>
-      {name}
-    </Name>
-    <AtomicMass>
-      {atomicMass}
-    </AtomicMass>
-  </StyledElement>
-)
+  render() {
+    return (
+      <div
+        className={`PeriodicTable__element ${this.props.symbol} ${this.props.groupName.toLowerCase().replace(/\//g, '-').replace(/ /g, '-')}`}
+        onMouseEnter={this.handleElMouseEnter(this.props.symbol)}
+        onMouseLeave={this.handleElMouseLeave(this.props.symbol)}
+      >
+        <span className="PeriodicTable__element__atomic_number">
+          {this.props.atomicNumber}
+        </span>
+        <span className="PeriodicTable__element__symbol">
+          {this.props.symbol}
+        </span>
+        <span className="PeriodicTable__element__name">
+          {this.props.name}
+        </span>
+        <span className="PeriodicTable__element__atomic_mass">
+        {this.props.atomicMass}
+        </span>
+      </div>
+    )
+  }
+}
 
 Element.propTypes = propTypes
-
-export default Element
