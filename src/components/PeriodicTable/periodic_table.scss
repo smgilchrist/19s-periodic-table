@@ -1,23 +1,27 @@
 @import './variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
 
 .PeriodicTable {
   display: grid;
   grid-template-columns: auto repeat(18, 1fr);
-  grid-template-rows: auto repeat(7, 1fr) 24px repeat(2, 1fr);
+  grid-template-rows: auto repeat(7, 55px) 24px repeat(2, 55px);
   padding-left: 1em;
   padding-right: 1em;
-  font-family: Roboto;
+  font-family: Roboto, Helvetica, Arial;  
   &__top_numbers {
     grid-row: 1;
     justify-self: center;
     margin-bottom: 10px;
     cursor: pointer;
+    color: #949494;
   }
   &__side_numbers {
     grid-column: 1;
     align-self: center;
     margin-right: 10px;
     cursor: pointer;
+    color: #949494;
   }
   &__actinides_block {
     display: grid;
@@ -124,11 +128,38 @@
       grid-template-columns: auto auto;
       grid-template-rows: auto auto auto;
       color: #000000;
+      text-align: center;
+      grid-row-gap: 8px;
       grid-template-areas:
         'atomic-mass el-eg'
         'io-energy el-affinity'
         'atomic-radius charges';
-      
+      &__atomic_mass {
+        grid-area: atomic-mass;
+      }  
+      &__el-eg {
+        grid-area: el-eg;
+      }
+      &__io-energy {
+        grid-area: io-energy;
+      }
+      &__el-affinity {
+        grid-area: el-affinity;        
+      }
+      &__atomic-radius {
+        grid-area: atomic-mass;
+      }
+      &__charges {
+        grid-area: charges;
+      }
+    }
+    h2 {
+      font-size: 20px;
+      font-family: 'Roboto-Black';    
+      margin: 0px;  
+    }
+    span {
+      font-size: 12px;
     }
   }
   .alkali-metals {

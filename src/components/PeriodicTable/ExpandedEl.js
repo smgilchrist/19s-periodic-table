@@ -34,7 +34,7 @@ const ExpandedEl = ({ element }) => (
           <div className="PeriodicTable__expanded_el__symbol__group" />
         )
 
-      }
+      }      
     </div>
     <div className="PeriodicTable__expanded_el__data">
       <div className="PeriodicTable__expanded_el__data__atomic_mass">
