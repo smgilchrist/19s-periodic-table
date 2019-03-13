@@ -122,6 +122,7 @@ export default class PeriodicTable extends Component {
   renderExpandedEl() {
     return (
       <ExpandedEl
+        element={elements.find(el => el.symbol === this.state.highlightedEl)}
       />
     )
   }
@@ -131,7 +132,7 @@ export default class PeriodicTable extends Component {
       <div className="PeriodicTable">
         {this.renderTopNumbers()}
         {this.renderSideNumbers()}
-        {this.renderExpandedEl()}
+        {this.state.highlightedEl && this.renderExpandedEl()}
         {this.renderLanthanidesBlock()}
         {this.renderActinidesBlock()}
         {this.renderElements()}
